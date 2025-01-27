@@ -1,3 +1,4 @@
+// Pra ativar as alterações do sass para o css ativar no terminal (npm run sass)
 // Colors
 $blue: #0077FF;
 $white: #FFFFFF;
@@ -26,17 +27,17 @@ html,body {
 .grid {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 45% 55%;
-    row-gap: 40px;
+    grid-template-rows: 45% 55%;//definir tamanho de cada grid, sendo agora em linha
+    row-gap: 40px;//espaço entre os grid
     width: 100%;
     height: 100%;
 
     .label-start {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        grid-row: 1;
+        justify-content: center;//alinhar no vertical
+        align-items: center;//alinhar no horizontal
+        grid-row: 1;//escolher em qual posição o grid vai ficar
         width: 100%;
         height: 100%;
         background-color: $green;
@@ -56,19 +57,19 @@ html,body {
     .formulario {
         width: 100%;
         height: 100%;
-        grid-row: 2;
+        grid-row: 2;//escolher em qual posição o grid vai ficar
 
         .title{
-            display: none;//Para não aparecer
+            display: none;//Para não aparecer o title h1
         }
 
         .form-group{
-            width: 90%;
-            margin: auto;
+            width: 90%;//escolher tamanho horizontal
+            margin: auto;//margin auto = centralizar
             margin-bottom: 20px;
 
             input {
-                width: 100%;
+                width: 100%;//para ocupar o tamanho total disponivel
                 height: 50px;
                 padding: 20px;
                 border-radius: 10px;
@@ -79,10 +80,10 @@ html,body {
                 font-weight: 300;
 
                 &:active {
-                    border: 2px solid $green; 
+                    border: 2px solid $green;//efeito ao clilcar
                 }
 
-                &:focus {
+                &:focus {//efeito ao "focar"
                     border: 2px solid $green; 
                 }
             }
@@ -98,18 +99,18 @@ html,body {
                 font-weight: 500 ;
 
                 &:hover {
-                    background-color: #056659;
+                    background-color: #056659;//efeito ao passar mouse por cima
                 }
 
                 &:active {
-                    background-color: #056659;
+                    background-color: #056659;//efeito ao clilcar
                 }
             }
 
         }
         // Centralizar botão
         .m-auto {
-            display: flex;
+            display: flex;//para facilitar centralizar
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -122,13 +123,13 @@ html,body {
 
     .grid {
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;//definir tamanho de cada grid,sendo em coluna
+        grid-template-rows: 100%;//deixando totalmente completo verticalmente
         width: 100%;
         height: 100%;
 
         .label-start{
-            display: flex;
+            display: flex;//flex pois os grids ja dividem a tela
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -151,7 +152,7 @@ html,body {
         }
         
         .formulario {
-            display: flex;
+            display: flex;//flex column para que ocupe o total do seu grid
             flex-direction: column;
             justify-content: center;
             width: 100%;
